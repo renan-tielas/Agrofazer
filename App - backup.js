@@ -1,41 +1,59 @@
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import React, {useState} from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity,TouchableHighlight,Button} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity,NavigationContainer,TouchableHighlight,Button} from 'react-native';
 // import { v4 as uuidv4 } from 'uuid';
 
-import Inicio from './Components/Inicio'
 import Cabeca from './Components/Cabeca'
 import ListaMat from './Components/ListaMat'
 import AdicionaItem from './Components/AdicionaItem'
 import Busca from './Components/Busca'
-
-
-
-
-const Stack = createStackNavigator();
-
-
 const App = () =>{
 
   return (
-
-    <NavigationContainer>
-    <Stack.Navigator
-     screenOptions={{
-      headerShown: false
-    }}>
-    <Stack.Screen
-      name="Inicio"
-      component={Inicio}
-      // options={{ title: 'Welcome' }}
-    />
+    // <NavigationContainer>
+<View style={estilos.container}>
+  
+    <View>
+    <Cabeca titulo='AgroFazer' style={estilos.cabeca}/>
+    </View>
+    <View >
+   
+    {/* <TouchableHighlight onPress={this.imageTouched}> */}
+    <Image 
+      // source={require('./Imagens/flor4.jpg')}
+      //COMENTARIO
+      style={estilos.imagem}/>
+      {/* </TouchableHighlight> */}
     
 
-
-    </Stack.Navigator>
-    </NavigationContainer>
+      <View>
+      <TouchableOpacity 
+        onPress={() => adicionaItem(texto)}>
+          
+    <Text style ={estilos.plantio}>
+        Plantar
+      </Text>
+      </TouchableOpacity>
+      </View>
+      <View>
+      <Text style ={estilos.beneficiamento}>
+        Beneficiar
+      </Text>
+      </View>
+      <View>
+      <Text style ={estilos.comercializacao}>
+        Vender
+      </Text>
+      </View>
+      <View>
+      <Text style ={estilos.politica}>
+        Apoio
+      </Text>
+      </View>
+    </View>
+    <Busca descricao='O que está procurando?'/>
+    {/* <AdicionaItem/> */}
+    </View>
 
   );
 };

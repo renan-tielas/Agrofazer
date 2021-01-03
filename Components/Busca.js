@@ -78,7 +78,7 @@ const estilos = StyleSheet.create({
   },
   botao: {
     // height:60,
-    backgroundColor: '#b58035',
+    backgroundColor: '#8c5a20',
     padding: 9,
     margin: 5,
     flexDirection:'row',
