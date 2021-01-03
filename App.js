@@ -1,90 +1,156 @@
 import React, {useState} from 'react';
-import {View, Text, Image, StyleSheet, FlatList, Alert} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity,NavigationContainer,TouchableHighlight,Button} from 'react-native';
 // import { v4 as uuidv4 } from 'uuid';
 
 import Cabeca from './Components/Cabeca'
-import ItemLista from './Components/ItemLista'
+import ListaMat from './Components/ListaMat'
 import AdicionaItem from './Components/AdicionaItem'
-
+import Busca from './Components/Busca'
 const App = () =>{
 
-const [itens, setItens ] = useState ([
-  {id:Math.random()*1000, texto: 'Solo'},
-  {id:Math.random()*1000, texto: 'Alimento'},
-  {id:Math.random()*1000, texto: 'Semente'},
-  {id:Math.random()*1000, texto: 'Planta'},
-])
-
-const adicionaItem = (texto) => {
-if (!texto) {
-  // Alert.alert('Erro','Por favor adicione um texto', 
-  // {text:'Ok'});
-  
-
-  Alert.alert('Erro', 'Por favor adicione um texto', [
-    { text: "OK", onPress: () => console.log("OK Pressed") }
-    ],
-    { cancelable: true });
-} else {
-  
-  setItens(
-    itemAnterior => {
-      return [
-        {id:Math.random()*1000,
-        texto},
-        ...itemAnterior]
-    }
-  )
-}
-
-}
-
-const deletaItem = (id) => {
-  setItens(
-    itemAnterior => {
-      return itemAnterior.filter(item => item.id !=id);
-
-    }
-  )
-}
-
-
   return (
-
-    <View style={estilos.container}>
-    <Cabeca titulo='Agrofazer'/>
+    // <NavigationContainer>
+<View style={estilos.container}>
   
-    <FlatList  data={itens} 
-    renderItem={({item}) =>(
-      <ItemLista item={item}
-      deletaItem={deletaItem}/>
-      
-    )}/>
-      <AdicionaItem adicionaItem={adicionaItem}/>
+    <View>
+    <Cabeca titulo='AgroFazer' style={estilos.cabeca}/>
+    </View>
+    <View >
+   
+    {/* <TouchableHighlight onPress={this.imageTouched}> */}
+    <Image 
+      source={require('./Imagens/flor4.jpg')}
+      style={estilos.imagem}/>
+      {/* </TouchableHighlight> */}
+    
 
-
-
+      <View>
+      <TouchableOpacity 
+        onPress={() => adicionaItem(texto)}>
+          
+    <Text style ={estilos.plantio}>
+        Plantar
+      </Text>
+      </TouchableOpacity>
+      </View>
+      <View>
+      <Text style ={estilos.beneficiamento}>
+        Beneficiar
+      </Text>
+      </View>
+      <View>
+      <Text style ={estilos.comercializacao}>
+        Vender
+      </Text>
+      </View>
+      <View>
+      <Text style ={estilos.politica}>
+        Apoio
+      </Text>
+      </View>
+    </View>
+    <Busca descricao='O que está procurando?'/>
+    {/* <AdicionaItem/> */}
     </View>
 
   );
 };
 
 
+
+
+
+
+
+// ------------------ Estilos
+
 const estilos = StyleSheet.create({
+
+  cabeca:{
+    fontFamily:'Serif',
+    width:400,
+  },
+
   container:{flex:1 ,
     // justifyContent:'center', 
-    // alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#d9fac8',
+    backgroundColor: '#e0fad2',
+    backgroundColor: '#fff5bd',
+
+    // backgroundColor: '#fbffb3',
   },
 
   texto: {
     color: 'darkslateblue',
     fontSize: 30,
   },
+  plantio: {
+    color: '#fff',
+    fontSize: 28,
+    fontWeight: 'bold',
+    position: 'absolute',
+    left: 95,
+    top:-285,
+
+    // backgroundColor: '#c2bad8',
+    // padding: 9,
+    // margin: 5,
+    
+    // shadowOffset:{  width: 10,  height: 10,  },
+    // shadowColor: 'black',
+    // shadowOpacity: 1.0,
+    // elevation: 5,  
+  },
+  beneficiamento: {
+    color: '#fff',
+    fontSize: 25,
+    fontWeight: 'bold',
+    position: 'absolute',
+    left: 220,
+    top:-240
+    
+
+  },
+
+  comercializacao: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+    position: 'absolute',
+    left: 40,
+    top:-170
+
+  },
+
+  politica: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+    position: 'absolute',
+    left: 185,
+    top:-115,
+    // borderColor:'#fff',
+
+  
+  },
 
   imagem: {
-    // width:100,
-    // height:100,
-    // borderRadius:20
+    width:360,
+    height:360,
+    borderRadius:200,
+    // borderColor:'#fcd260',
+    // borderWidth:6,
+    // borderStyle:'solid',
+   
+    alignItems: 'center',
+    marginTop:100,
+    marginLeft:7,
+  
+    shadowOffset:{  width: 10,  height: 10,  },
+    shadowColor: 'black',
+    shadowOpacity: 1.0,
+
   }
 });
 
