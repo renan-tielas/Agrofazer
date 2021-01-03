@@ -12,7 +12,7 @@ import Busca from './Busca'
 
 
 
-const Inicio = () =>{
+const Inicio = ({navigation}) =>{
 
   return (
 
@@ -32,13 +32,20 @@ const Inicio = () =>{
     
 
       <View>
-      <TouchableOpacity 
+      <Button
+      title="Plantar"
+      onPress={() =>
+        navigation.navigate('Plantio')
+      }
+    />
+      {/* <TouchableOpacity 
         onPress={() => adicionaItem(texto)}>
           
     <Text style ={estilos.plantio}>
         Plantar
       </Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+
       </View>
       <View>
       <Text style ={estilos.beneficiamento}>

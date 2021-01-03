@@ -1,49 +1,72 @@
-import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity,TouchableHighlight,Button} from 'react-native';
-// import { v4 as uuidv4 } from 'uuid';
 
-import Inicio from './Components/Inicio'
-import Plantio from './Components/Plantio'
-import Cabeca from './Components/Cabeca'
-import ListaMat from './Components/ListaMat'
-import AdicionaItem from './Components/AdicionaItem'
-import Busca from './Components/Busca'
+
+
+import Cabeca from './Cabeca'
+import Busca from './Busca'
 
 
 
 
-const Stack = createStackNavigator();
 
 
-const App = () =>{
+
+const Plantio = () =>{
 
   return (
 
-    <NavigationContainer>
-    <Stack.Navigator
-     screenOptions={{
-      headerShown: false
-    }}>
-    <Stack.Screen
-      name="Inicio"
-      component={Inicio}
-      // options={{ title: 'Welcome' }}
-    />
-    
-    <Stack.Screen name="Plantio" component={Plantio} />
+<View style={estilos.container}>
+  
+    <View>
+    <Cabeca titulo='AgroFazer' subtitulo='ajuda a fazer seus trabalhos' style={estilos.cabeca}/>
+    </View>
 
-    </Stack.Navigator>
-    </NavigationContainer>
+    <View >
+   
+    {/* <TouchableHighlight onPress={this.imageTouched}> */}
+    <Image 
+      source={require('../Imagens/flor4.jpg')}
+      style={estilos.imagem}/>
+      {/* </TouchableHighlight> */}
+    
+
+      <View>
+      <TouchableOpacity 
+        onPress={() => adicionaItem(texto)}>
+          
+    <Text style ={estilos.plantio}>
+        Plantar
+      </Text>
+      </TouchableOpacity>
+      </View>
+      <View>
+      <Text style ={estilos.beneficiamento}>
+        Beneficiar
+      </Text>
+      </View>
+      <View>
+      <Text style ={estilos.comercializacao}>
+        Vender
+      </Text>
+      </View>
+      <View>
+
+
+      <Text style ={estilos.politica}>
+        Apoio
+      </Text>
+
+
+      </View>
+    </View>
+    <Busca descricao='O que está procurando?'/>
+    {/* <AdicionaItem/> */}
+    </View>
 
   );
 };
 
-
-// FAZER TITULOS À MÃO - PLANTAR, BENEFICIAR, VENDER, 
-// FAZER ANOTAÇÕES À MÃO INDICANDO FUNCIONALIDADES
 
 
 
@@ -59,7 +82,7 @@ const estilos = StyleSheet.create({
     width:400,
   },
 
-  container:{flex:1 ,
+  container:{flex:1,
     // justifyContent:'center', 
     alignItems: 'center',
     backgroundColor: '#d9fac8',
@@ -143,29 +166,5 @@ const estilos = StyleSheet.create({
 });
 
 
-export default App;
+export default Plantio;
 
-
-
-
-
-/* Código antigo
-
-
-
-
-
-import { Dimensions } from 'react-native';
-   const windowWidth = Dimensions.get('window').width;
-    const windowHeight = Dimensions.get('window').height;
- 
-
-
-
-
-
-
-
-
-
-*/
