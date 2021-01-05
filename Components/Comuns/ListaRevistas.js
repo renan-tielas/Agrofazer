@@ -5,6 +5,9 @@ import {View, Text, Image, StyleSheet, FlatList, Alert} from 'react-native';
 import ItemLista from './ItemLista'
 import AdicionaItem from './AdicionaItem'
 
+
+
+// lista revistas slides e outro
 const ListaItens = () =>{
 
 const [itens, setItens ] = useState ([

@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome'
 
 
-const ItemLista = ({item, deletaItem}) =>{
+const ItemRevista = ({item, deletaItem}) =>{
  
 
     return (
@@ -50,4 +50,4 @@ const estilos = StyleSheet.create({
 });
 
 
-export default ItemLista;
+export default ItemRevista;

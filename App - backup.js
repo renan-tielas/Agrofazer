@@ -3,10 +3,10 @@ import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity,NavigationContainer,TouchableHighlight,Button} from 'react-native';
 // import { v4 as uuidv4 } from 'uuid';
 
-import Cabeca from './Components/Cabeca'
-import ListaMat from './Components/ListaMat'
-import AdicionaItem from './Components/AdicionaItem'
-import Busca from './Components/Busca'
+import Cabeca from './Components/Comuns/Cabeca'
+import ListaMat from './Components/Comuns/ListaMat'
+import AdicionaItem from './Components/Comuns/AdicionaItem'
+import Busca from './Components/Comuns/Busca'
 const App = () =>{
 
   return (

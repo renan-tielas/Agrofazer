@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import {View, Text, Image, StyleSheet, TouchableOpacity,NavigationContainer,TouchableHighlight,Button} from 'react-native';
+// import { TouchableOpacity} from 'react-native-gesture-handler'
+
+import {View, Text, Image, StyleSheet, NavigationContainer,TouchableOpacity,TouchableHighlight,Button} from 'react-native';
 
 
 
-import Cabeca from './Cabeca'
-import Busca from './Busca'
+import Cabeca from './Comuns/Cabeca'
+import Busca from './Comuns/Busca'
 
 
 
@@ -32,19 +34,34 @@ const Inicio = ({navigation}) =>{
     
 
       <View>
-      <Button
+      {/* <Button
       title="Plantar"
       onPress={() =>
         navigation.navigate('Plantio')
       }
-    />
-      {/* <TouchableOpacity 
-        onPress={() => adicionaItem(texto)}>
+    /> */}
+
+{/* 
+<TouchableOpacity
+        style={styles.button}
+        onPress={onPress}
+      >
+        <Text>Press Here</Text>
+      </TouchableOpacity> */}
+
+
+      <TouchableOpacity 
+      //  style ={estilos.opacity} 
+      style ={estilos.opacity} 
+        onPress={() =>
+          navigation.navigate('Plantio')
+        }
+        >
           
-    <Text style ={estilos.plantio}>
+    <Text  style ={estilos.plantio} >
         Plantar
       </Text>
-      </TouchableOpacity> */}
+      </TouchableOpacity>
 
       </View>
       <View>
@@ -84,6 +101,13 @@ const Inicio = ({navigation}) =>{
 
 const estilos = StyleSheet.create({
 
+
+  opacity:{
+    position: 'absolute',
+    left: 100,
+    top:-285,
+  },
+
   cabeca:{
     fontFamily:'Serif',
     width:400,
@@ -107,9 +131,7 @@ const estilos = StyleSheet.create({
     color: '#fff',
     fontSize: 28,
     fontWeight: 'bold',
-    position: 'absolute',
-    left: 95,
-    top:-285,
+    
 
     // backgroundColor: '#c2bad8',
     // padding: 9,

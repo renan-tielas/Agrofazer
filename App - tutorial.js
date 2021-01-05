@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, FlatList, Alert} from 'react-native';
 // import { v4 as uuidv4 } from 'uuid';
 
-import Cabeca from './Components/Cabeca'
-import ItemLista from './Components/ItemLista'
-import AdicionaItem from './Components/AdicionaItem'
+import Cabeca from './Components/Comuns/Cabeca'
+import ItemLista from './Components/Comuns/ItemLista'
+import AdicionaItem from './Components/Comuns/AdicionaItem'
 
 const App = () =>{
 

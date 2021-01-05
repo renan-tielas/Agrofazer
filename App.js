@@ -6,12 +6,12 @@ import {View, Text, Image, StyleSheet, TouchableOpacity,TouchableHighlight,Butto
 // import { v4 as uuidv4 } from 'uuid';
 
 import Inicio from './Components/Inicio'
-import Plantio from './Components/Plantio'
-import Cabeca from './Components/Cabeca'
-import ListaMat from './Components/ListaMat'
-import AdicionaItem from './Components/AdicionaItem'
-import Busca from './Components/Busca'
-
+import Plantio from './Components/Plantio/Plantio'
+import Cabeca from './Components/Comuns/Cabeca'
+import ItemLista from './Components/Comuns/ItemLista'
+import AdicionaItem from './Components/Comuns/AdicionaItem'
+import Busca from './Components/Comuns/Busca'
+import Revista from './Components/Itens/Revista'
 
 
 
@@ -32,8 +32,9 @@ const App = () =>{
       component={Inicio}
       // options={{ title: 'Welcome' }}
     />
-    
+    <Stack.Screen name="ItemLista" component={ItemLista} />
     <Stack.Screen name="Plantio" component={Plantio} />
+    <Stack.Screen name="Revista" component={Revista} />
 
     </Stack.Navigator>
     </NavigationContainer>

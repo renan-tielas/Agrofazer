@@ -3,8 +3,8 @@ import {View, Text, Image, StyleSheet, TouchableOpacity,TouchableHighlight,Butto
 
 
 
-import Cabeca from './Cabeca'
-import Busca from './Busca'
+import Cabeca from '../Comuns/Cabeca'
+import ListaItens from '../Comuns/ListaItens'
 
 
 
@@ -12,56 +12,12 @@ import Busca from './Busca'
 
 
 
-const Plantio = () =>{
+const Beneficiamento = () =>{
 
   return (
 
 <View style={estilos.container}>
-  
-    <View>
-    <Cabeca titulo='AgroFazer' subtitulo='ajuda a fazer seus trabalhos' style={estilos.cabeca}/>
-    </View>
-
-    <View >
-   
-    {/* <TouchableHighlight onPress={this.imageTouched}> */}
-    <Image 
-      source={require('../Imagens/flor4.jpg')}
-      style={estilos.imagem}/>
-      {/* </TouchableHighlight> */}
-    
-
-      <View>
-      <TouchableOpacity 
-        onPress={() => adicionaItem(texto)}>
-          
-    <Text style ={estilos.plantio}>
-        Plantar
-      </Text>
-      </TouchableOpacity>
-      </View>
-      <View>
-      <Text style ={estilos.beneficiamento}>
-        Beneficiar
-      </Text>
-      </View>
-      <View>
-      <Text style ={estilos.comercializacao}>
-        Vender
-      </Text>
-      </View>
-      <View>
-
-
-      <Text style ={estilos.politica}>
-        Apoio
-      </Text>
-
-
-      </View>
-    </View>
-    <Busca descricao='O que está procurando?'/>
-    {/* <AdicionaItem/> */}
+  <ListaItens/>
     </View>
 
   );
@@ -166,5 +122,5 @@ const estilos = StyleSheet.create({
 });
 
 
-export default Plantio;
+export default Beneficiamento;
 

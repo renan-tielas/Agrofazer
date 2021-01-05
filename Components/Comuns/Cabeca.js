@@ -16,7 +16,7 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 
 
 
-const Cabeca = ({titulo,subtitulo}) =>{
+const Cabeca = ({titulo,subtitulo,descricao, cor}) =>{
 
   return (
 
@@ -30,6 +30,13 @@ const Cabeca = ({titulo,subtitulo}) =>{
         {subtitulo}
         {/* //como fazer fade out?? */}
       </Text>
+      <View style={estilos.descricaoV}>
+      <Text style ={estilos.descricao}>
+      {descricao}
+     
+    </Text>
+    </View>
+      
 
     </View>
 
@@ -71,6 +78,26 @@ const estilos = StyleSheet.create({
     fontWeight: 'bold',
     top:0,
     backgroundColor:'#4c4ed9',
+  },
+  descricao: {
+    height:186 ,
+    width: 360,
+    color:'#4c4ed9',
+    // color: '#fff',
+    fontSize: 22,
+    textAlign:'justify',
+    // fontWeight: 'bold',
+    top:0,
+    // backgroundColor:'#4c4ed9',
+    flexWrap:'wrap',
+  },
+  descricaoV: {
+    top:10,
+    // height:26 ,
+    maxWidth: 400,
+    maxHeight: 400,
+    alignSelf:'center',
+    
   },
 
 
