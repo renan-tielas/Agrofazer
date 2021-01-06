@@ -34,55 +34,71 @@ const Inicio = ({navigation}) =>{
     
 
       <View>
-      {/* <Button
-      title="Plantar"
-      onPress={() =>
-        navigation.navigate('Plantio')
-      }
-    /> */}
-
-{/* 
-<TouchableOpacity
-        style={styles.button}
-        onPress={onPress}
-      >
-        <Text>Press Here</Text>
-      </TouchableOpacity> */}
-
-
       <TouchableOpacity 
-      //  style ={estilos.opacity} 
       style ={estilos.opacity} 
         onPress={() =>
           navigation.navigate('Plantio')
         }
         >
-          
     <Text  style ={estilos.plantio} >
         Plantar
       </Text>
       </TouchableOpacity>
-
       </View>
+
+
       <View>
-      <Text style ={estilos.beneficiamento}>
+      <TouchableOpacity 
+      style ={estilos.opacityB} 
+        onPress={() =>
+          navigation.navigate('Beneficiamento')
+        }
+        >
+    <Text  style ={estilos.beneficiamento} >
         Beneficiar
       </Text>
+      </TouchableOpacity>
       </View>
+
+
+
+    
+
+
+
+
+
       <View>
-      <Text style ={estilos.comercializacao}>
+      <TouchableOpacity 
+      style ={estilos.opacityC} 
+        onPress={() =>
+          navigation.navigate('Comercializacao')
+        }
+        >
+    <Text  style ={estilos.comercializacao} >
         Vender
       </Text>
+      </TouchableOpacity>
       </View>
+
+
+
+
       <View>
-
-
-      <Text style ={estilos.politica}>
+      <TouchableOpacity 
+      style ={estilos.opacityP} 
+        onPress={() =>
+          navigation.navigate('Apoio')
+        }
+        >
+    <Text  style ={estilos.politica} >
         Apoio
       </Text>
-
-
+      </TouchableOpacity>
       </View>
+
+
+
     </View>
     <Busca descricao='O que está procurando?'/>
     {/* <AdicionaItem/> */}
@@ -146,33 +162,39 @@ const estilos = StyleSheet.create({
     color: '#fff',
     fontSize: 25,
     fontWeight: 'bold',
+    
+  },
+  opacityB:{
     position: 'absolute',
     left: 220,
     top:-240
-    
-
   },
-
   comercializacao: {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
+   
+
+  },
+  opacityC:{
     position: 'absolute',
     left: 40,
     top:-170
-
   },
 
   politica: {
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
-    position: 'absolute',
-    left: 185,
-    top:-115,
+    
     // borderColor:'#fff',
 
   
+  },
+  opacityP:{
+    position: 'absolute',
+    left: 185,
+    top:-115,
   },
 
   imagem: {

@@ -7,6 +7,9 @@ import {View, Text, Image, StyleSheet, TouchableOpacity,TouchableHighlight,Butto
 
 import Inicio from './Components/Inicio'
 import Plantio from './Components/Plantio/Plantio'
+import Beneficiamento from './Components/Beneficiamento/Beneficiamento'
+import Comercializacao from './Components/Comercializacao/Comercializacao'
+import Apoio from './Components/Apoio/Apoio'
 import Cabeca from './Components/Comuns/Cabeca'
 import ItemLista from './Components/Comuns/ItemLista'
 import AdicionaItem from './Components/Comuns/AdicionaItem'
@@ -34,6 +37,10 @@ const App = () =>{
     />
     <Stack.Screen name="ItemLista" component={ItemLista} />
     <Stack.Screen name="Plantio" component={Plantio} />
+    <Stack.Screen name="Beneficiamento" component={Beneficiamento} />
+    <Stack.Screen name="Comercializacao" component={Comercializacao} />
+    <Stack.Screen name="Apoio" component={Apoio} />
+
     <Stack.Screen name="Revista" component={Revista} />
 
     </Stack.Navigator>
