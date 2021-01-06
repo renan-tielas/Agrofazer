@@ -1,5 +1,5 @@
 # Agrofazer
-Um aplicativo de celular para auxiliar no fazer do agricultor que planta, se alimenta da sua produção, beneficia, comercializa e se beneficia de políticas públicas.
+Um aplicativo de celular para auxiliar no fazer do agricultor que planta, se alimenta da sua produção, beneficia, comercializa, e se apoia em sua comunidade e políticas públicas.
 
 Os conteúdos de texto presente são apenas para dar uma idéia do que o aplicativo propõe.
 
