@@ -24,7 +24,6 @@ Tela Vender:
 Tela Apoio:
 ![alt text](https://github.com/renan-tielas/Agrofazer/blob/master/prints/print5.jpeg?raw=true)
 
-
 Tela Podas:
 ![alt text](https://github.com/renan-tielas/Agrofazer/blob/master/prints/print6.jpeg?raw=true)
 
