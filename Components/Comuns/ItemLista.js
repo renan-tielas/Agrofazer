@@ -66,6 +66,10 @@ const estilos = StyleSheet.create({
     // borderColor: 'red',
     borderWidth: 10,
     borderStyle: 'solid',
+    // shadowColor:'black',
+    // shadowOpacity:100,
+    // shadowRadius:2,
+    // elevation:3,
    
   },
 
@@ -73,9 +77,10 @@ const estilos = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    shadowColor:'red',
-    shadowOpacity:50,
-    shadowRadius:20,
+    // shadowColor:'red',
+    // shadowOpacity:50,
+    // shadowRadius:20,
+    // elevation:3,
     // shadowOffset:,
   },
   itemListaTituloView: {
